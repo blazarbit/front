@@ -1,6 +1,7 @@
-import React, {FunctionComponent} from "react";
+import {FunctionComponent} from "react";
 
 import styles from "./header.module.css"
+import {ConnectWallet} from "../../buttons";
 
 export const Header: FunctionComponent = () => {
     return (
@@ -11,6 +12,7 @@ export const Header: FunctionComponent = () => {
                     Don&#39;t be an exchange, be an Inter-blockchain Payment System!
                 </p>
             </div>
+            <ConnectWallet/>
         </header>
     );
 }

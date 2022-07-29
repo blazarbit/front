@@ -1,0 +1,32 @@
+.aboutPanel {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.13);
+    border-radius: 20px;
+}
+
+.paymentPanel {
+    width: 550px;
+    border-color: rgba(151, 140, 253, 1);
+    border-radius: 20px;
+    border-width: 2px;
+    background: rgba(255, 255, 255, 0.13);
+    backdrop-filter: blur(4px);
+    background-size: cover;
+}
+
+.contentContainer {
+    padding: 0 2rem;
+    max-width: none;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.contentContainer::-webkit-scrollbar {
+    width: 0.5rem;
+    padding-right: 5px;
+}
+
+.contentContainer::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}

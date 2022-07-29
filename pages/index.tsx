@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import Layout from "../components/layouts/layout";
 import React from "react";
+import { Layout } from '../components/layouts';
 
 export default function Home() {
     return (

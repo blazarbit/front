@@ -1,0 +1,23 @@
+.button {
+    padding: 0;
+    width: 170px;
+    height: 40px;
+    color: #FFFFFF!important;
+    text-transform: none;
+    border-radius: 10px;
+}
+
+.connectWalletButton {
+    background: linear-gradient(91.2deg, #6D56E4 1.47%, #A45DCC 66.44%, #D355D2 97.27%), #D9D9D9;
+}
+
+.connectedWalletButton:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    padding: 2px;
+    background: linear-gradient(91.2deg, #7864E8 1.47%, #6B90FF 25.48%, #7069ED 66.44%, #B25BF7 97.27%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+}
