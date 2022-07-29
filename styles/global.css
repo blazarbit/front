@@ -1,0 +1,33 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', serif;
+  line-height: 24px;
+  font-weight:400;
+  font-size: 20px;
+  font-style: normal;
+}
+
+body {
+  background-color: #141527;
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
