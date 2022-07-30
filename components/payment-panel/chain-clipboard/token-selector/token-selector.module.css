@@ -1,0 +1,36 @@
+.tokenSelector {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    background: rgba(5, 5, 5, 0.44);
+    border-radius: 10px;
+    border-width: 0;
+}
+
+.tokenNotSelected:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    padding: 2px;
+    background: linear-gradient(91.2deg, #7864E8 1.47%, #6B90FF 25.48%, #7069ED 66.44%, #B25BF7 97.27%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+}
+
+.placeHolder {
+    color: white;
+    padding-left: 0.5rem;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.selectorArrow {
+    transform: rotateZ(-90deg);
+    margin-bottom: 0.5rem;
+    color: white;
+}

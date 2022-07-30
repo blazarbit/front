@@ -1,0 +1,25 @@
+.labelPanel {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 0.2rem;
+    color: #FFFFFF;
+    padding-left: calc(1rem + 6px);
+    padding-right: 0.5rem;
+}
+
+.labelPanel span {
+    text-transform: capitalize;
+}
+
+.tokenPanel {
+    border-radius: 12px;
+    padding: 0.5rem;
+    height: 90px;
+}
+
+.tokenSelector {
+    background: rgba(5, 5, 5, 0.44);
+    border-width: 10px;
+    border-image-source: linear-gradient(91.2deg, #7864E8 1.47%, #6B90FF 25.48%, #7069ED 66.44%, #B25BF7 97.27%);
+}

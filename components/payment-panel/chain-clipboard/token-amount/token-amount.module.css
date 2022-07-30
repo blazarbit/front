@@ -1,0 +1,26 @@
+.amountInput {
+    color: white;
+    background: rgba(23, 23, 23, 0.51);
+    border-radius: 10px;
+}
+
+.amountInput input {
+    margin-right: 1rem;
+    -webkit-text-fill-color: white !important;
+    text-transform: uppercase;
+}
+
+.inputEnabled {
+    background: rgba(23, 23, 23, 0.51);
+}
+
+.inputDisabled:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    padding: 2px;
+    background: linear-gradient(91.2deg, #7864E8 1.47%, #6B90FF 25.48%, #7069ED 66.44%, #B25BF7 97.27%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+}

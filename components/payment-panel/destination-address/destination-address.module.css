@@ -1,0 +1,20 @@
+.labelPanel {
+    padding-left: calc(1rem + 6px);
+    margin-top: 0.75rem;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+
+.destinationAddress {
+    background: rgba(5, 5, 5, 0.44);
+    border-radius: 12px;
+    padding: 1rem 1rem 1rem calc(1rem + 6px);
+    width: 100%;
+    height: 45px;
+}
+
+.destinationAddress input {
+    text-transform: capitalize;
+    color: #AAAAAA;
+}

@@ -1,0 +1,11 @@
+.panelTitle {
+    text-transform: uppercase;
+
+    background: linear-gradient(91.14deg, #978CFD 7.64%, #8696FB 32.35%, #9A80FF 67.21%, #C883FF 102.38%), #FFFFFF;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.panelContainer {
+    padding: 0 1rem 1rem;
+}

@@ -1,3 +1,19 @@
+.medium12 {
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.medium14 {
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+}
+
 .medium16 {
     font-family: 'Inter', serif;
     font-style: normal;
@@ -12,4 +28,20 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
+}
+
+.bold18 {
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.bold20 {
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
 }

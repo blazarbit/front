@@ -1,0 +1,45 @@
+.labelPanel {
+    padding-left: calc(1rem + 6px);
+    margin-top: 0.75rem;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+
+.textArea {
+    height: 90px;
+}
+
+.textArea > div {
+    padding: 0;
+    background: rgba(5, 5, 5, 0.44);
+    border-radius: 12px;
+}
+
+.textArea textarea {
+    overflow-y: scroll;
+    margin: 1rem;
+    text-align: justify;
+    padding-left: 6px;
+    padding-right: 0.5rem;
+    color: #AAAAAA;
+
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+}
+
+.textArea textarea::-webkit-scrollbar {
+    width: 0.2rem;
+}
+
+.textArea textarea::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.textArea textarea::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
