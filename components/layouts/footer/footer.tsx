@@ -13,7 +13,7 @@ export const Footer: FunctionComponent = () => {
             <Box sx={{
                 display: 'flex',
                 justifyContent: 'space-between',
-                width: 80
+                width: 120
             }}>
                 <a href="https://github.com/blazarbit">
                     <Box

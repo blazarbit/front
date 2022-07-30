@@ -9,8 +9,8 @@
     border-color: rgba(151, 140, 253, 1);
     border-radius: 20px;
     border-width: 2px;
-    background: rgba(255, 255, 255, 0.13);
     backdrop-filter: blur(4px);
+    background-image: url("../../../public/paymentForm-border.png");
     background-size: cover;
 }
 
