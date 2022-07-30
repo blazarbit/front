@@ -15,3 +15,25 @@
 .labelContainer>p, .labelContainer>a {
     margin: 0 0.5rem;
 }
+
+.slogan {
+    margin-left: 90px;
+}
+
+.slogan p {
+    margin: 0;
+}
+
+.slogan .topPart {
+    color: rgba(107, 50, 199, 0.74);
+}
+
+.slogan .bottomPart {
+    text-transform: uppercase;
+
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(91.2deg, #7864E8 1.47%, #6B90FF 25.48%, #7069ED 66.44%, #B25BF7 97.27%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}

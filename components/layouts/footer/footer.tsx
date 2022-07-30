@@ -10,9 +10,31 @@ export const Footer: FunctionComponent = () => {
             <span className="medium16">
                 Created by <b>Blazarbit</b> team © 2022
             </span>
-            <Box>
-                <a className="medium16">Twitter</a>
-                <a className="medium16">Github</a>
+            <Box sx={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                width: 80
+            }}>
+                <a href="https://github.com/blazarbit">
+                    <Box
+                        component="img"
+                        sx={{
+                            width: 34,
+                            height: 34
+                        }}
+                        src="gitLogo.png"
+                    />
+                </a>
+                <a href="https://twitter.com/blazarbit">
+                    <Box
+                        component="img"
+                        sx={{
+                            width: 34,
+                            height: 34
+                        }}
+                        src="twitterLogo.png"
+                    />
+                </a>
             </Box>
             <span className="medium16">
                 Developed during <b>HackAtom Seoul 2022</b>
