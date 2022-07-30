@@ -29,6 +29,12 @@ export class Token implements Contract {
     @property("deposited_on")
     blockchain: Blockchain;
 
+    constructor(denom: string, tokenData: TokenData, blockchain: Blockchain) {
+        this.denom = denom;
+        this.tokenData = tokenData;
+        this.blockchain = blockchain;
+    }
+
     get blockchainName(): string {
         return this.tokenData.baseBlockchain.blockchainName;
     }
@@ -56,6 +62,12 @@ export class DestinationAsset {
 
     @property("logo_url")
     logoUrl: string;
+
+    constructor(contractAddress: string, name: string, logoUrl: string) {
+        this.contractAddress = contractAddress;
+        this.name = name;
+        this.logoUrl = logoUrl;
+    }
 }
 
 export class NftContract extends DestinationAsset implements Contract {
@@ -65,6 +77,12 @@ export class NftContract extends DestinationAsset implements Contract {
     @typed(Blockchain)
     @property("blockchain")
     blockchain: Blockchain;
+
+    constructor(contractAddress: string, name: string, logoUrl: string, tokenId: string, blockchain: Blockchain) {
+        super(contractAddress, name, logoUrl);
+        this.tokenId = tokenId;
+        this.blockchain = blockchain;
+    }
 
     get chainName(): string {
         return this.name;
@@ -88,6 +106,11 @@ export class Donation extends DestinationAsset implements Contract {
     @typed(Token)
     @property("token")
     token: Token;
+
+    constructor(contractAddress: string, name: string, logoUrl: string, token: Token) {
+        super(contractAddress, name, logoUrl);
+        this.token = token;
+    }
 
     get chainName(): string {
         return this.token.tokenData.symbol;

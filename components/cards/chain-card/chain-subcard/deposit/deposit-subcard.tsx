@@ -1,12 +1,12 @@
 import {FunctionComponent} from "react";
 import {Box} from "@mui/material";
-import {Contract, Token} from "../../../../../apollo-client/data-model";
+import {Token} from "../../../../../apollo-client/data-model";
 
 import styles from "./deposit-subcard.module.css";
 import classNames from "classnames";
 
 interface Props {
-    contract: Contract | Token;
+    contract: Token;
 }
 
 export const DepositSubCard: FunctionComponent<Props> = ({contract}) => {

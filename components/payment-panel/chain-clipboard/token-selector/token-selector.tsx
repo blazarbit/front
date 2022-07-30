@@ -4,7 +4,7 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import {Button} from "@mui/material";
 import {Contract} from "../../../../apollo-client/data-model";
 import {useBlurContext} from "../../../../contexts";
-import {TokenSelectorModal} from "../../../modals/token-selector-modal";
+import {TokenSelectorModal} from "../../../modals";
 import {ChainCard} from "../../../cards/chain-card";
 
 import styles from "./token-selector.module.css";

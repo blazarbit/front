@@ -1,12 +1,12 @@
 import {FunctionComponent} from "react";
 import {Box} from "@mui/material";
-import {Contract, NftContract} from "../../../../../apollo-client/data-model";
+import {NftContract} from "../../../../../apollo-client/data-model";
 
 import styles from "./nft-subcard.module.css";
 import classNames from "classnames";
 
 interface Props {
-    contract: Contract | NftContract;
+    contract: NftContract;
 }
 
 export const NftSubCard: FunctionComponent<Props> = ({contract}) => {

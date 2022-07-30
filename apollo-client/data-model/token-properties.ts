@@ -26,6 +26,17 @@ export class Blockchain {
     @optional()
     @property("prefix")
     prefix: string;
+
+    constructor(blockchainName: string, blockchainNetworkId: string, blockchainLogoUrl: string, gasPrise: number, rpcNodeAddress: string, protocolContractAddress: string, prefix: string) {
+        this.blockchainName = blockchainName;
+        this.blockchainNetworkId = blockchainNetworkId;
+        this.blockchainLogoUrl = blockchainLogoUrl;
+        this.gasPrise = gasPrise;
+        this.rpcNodeAddress = rpcNodeAddress;
+        this.protocolContractAddress = protocolContractAddress;
+        this.prefix = prefix;
+    }
+
 }
 
 export class TokenData {
@@ -46,4 +57,12 @@ export class TokenData {
     @typed(Blockchain)
     @property("base_blockchain")
     baseBlockchain: Blockchain;
+
+    constructor(symbol: string, logoUrl: string, exponent: number, baseDenom: string, baseBlockchain: Blockchain) {
+        this.symbol = symbol;
+        this.logoUrl = logoUrl;
+        this.exponent = exponent;
+        this.baseDenom = baseDenom;
+        this.baseBlockchain = baseBlockchain;
+    }
 }
