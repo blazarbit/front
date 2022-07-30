@@ -1,0 +1,63 @@
+.modalContainer {
+    color: black;
+    background: #FFFFFF;
+    padding: 0;
+    width: 826px;
+    height: 459px;
+}
+
+
+.modalHeader {
+    color: #FFFFFF;
+    height: 56px;
+    background: linear-gradient(91.2deg, #7864E8 1.47%, #6B90FF 25.48%, #7069ED 66.44%, #B25BF7 97.27%);
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.chainContainer {
+    width: 357px;
+    background: linear-gradient(91.2deg, #7864E8 1.47%, #6B90FF 25.48%, #7069ED 66.44%, #B25BF7 97.27%);
+    border-radius: 12px;
+    padding: 0.5rem;
+}
+
+section.chainGrid::-webkit-scrollbar {
+    width: 0.5rem;
+    padding-right: 5px;
+}
+
+section.chainGrid::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+
+.selectedTab {
+    background-color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 58px;
+}
+
+.selectedTab span {
+    background: linear-gradient(91.2deg, #6D56E4 1.47%, #A45DCC 66.44%, #D355D2 97.27%), #D9D9D9;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-transform: uppercase;
+}
+
+.notSelectedTab {
+    color: white;
+}
+
+.tabSpan {
+    margin: 0;
+    text-transform: uppercase;
+}

@@ -1,20 +1,26 @@
-import styles from './layout.module.css'
-import React, {FunctionComponent} from "react";
+import {FunctionComponent, useState} from "react";
 import {Footer} from "./footer";
 import {Header} from "./header";
 import {Content} from "./content";
 import {Box} from "@mui/material";
+import {BlurContext, TokensLoadedContext} from "../../contexts";
 
-interface Props {
-    children: React.ReactNode
-}
+import styles from "./layout.module.css";
+import classNames from "classnames";
 
-export const Layout: FunctionComponent<Props> = ({children}) => {
+export const Layout: FunctionComponent = () => {
+    const [blurScreen, setBlurScreen] = useState(false);
+    const [tokensLoaded, setTokensLoaded] = useState(false);
+
     return (
-        <Box className={styles.container}>
-            <Header/>
-            <Content/>
-            <Footer/>
-        </Box>
+        <BlurContext.Provider value={{blurScreen, setBlurScreen}}>
+            <TokensLoadedContext.Provider value={{tokensLoaded, setTokensLoaded}}>
+                <Box className={classNames(styles.container, blurScreen ? styles.modalBlur : null)}>
+                    <Header/>
+                    <Content/>
+                    <Footer/>
+                </Box>
+            </TokensLoadedContext.Provider>
+        </BlurContext.Provider>
     );
 }

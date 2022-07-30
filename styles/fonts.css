@@ -45,3 +45,11 @@
     font-size: 20px;
     line-height: 24px;
 }
+
+.bold26 {
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 31px;
+}

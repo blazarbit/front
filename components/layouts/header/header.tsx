@@ -1,7 +1,7 @@
 import {FunctionComponent} from "react";
-
-import styles from "./header.module.css"
 import {ConnectWallet} from "../../buttons";
+
+import styles from "./header.module.css";
 
 export const Header: FunctionComponent = () => {
     return (

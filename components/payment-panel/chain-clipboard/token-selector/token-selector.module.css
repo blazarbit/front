@@ -1,3 +1,11 @@
+.fakeImage {
+    width: 60px;
+    height: 60px;
+    background: #1f3926;
+    border: 1px solid #FFFFFF;
+    border-radius: 40px;
+}
+
 .tokenSelector {
     position: relative;
     display: flex;
@@ -7,6 +15,10 @@
     background: rgba(5, 5, 5, 0.44);
     border-radius: 10px;
     border-width: 0;
+}
+
+.tokenSelected:hover {
+    background: rgba(5, 5, 5, 0.51);
 }
 
 .tokenNotSelected:after {

@@ -1,0 +1,53 @@
+.chainContainer {
+    width: 357px;
+    background: linear-gradient(91.2deg, #7864E8 1.47%, #6B90FF 25.48%, #7069ED 66.44%, #B25BF7 97.27%);
+    border-radius: 12px;
+    padding: 0.5rem;
+}
+
+.tokenButton {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    background: rgba(5, 5, 5, 0.44);
+    border-radius: 10px;
+    border-width: 0;
+}
+
+.tokenButton:hover {
+    background: rgba(5, 5, 5, 0.51);
+}
+
+.chainCardContainer {
+    color: white;
+    padding-left: 0.5rem;
+    height: 64px;
+    display: flex;
+    align-items: center;
+}
+
+.informationContainer {
+    flex-direction: column;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+}
+
+.informationContainer p {
+    margin: 0;
+    text-align: center;
+}
+
+.informationContainer .topPart {
+    color: #0F082D;
+}
+
+.informationContainer .bottomPart {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(91.2deg, #7864E8 1.47%, #6B90FF 25.48%, #7069ED 66.44%, #B25BF7 97.27%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}

@@ -18,7 +18,11 @@
     height: 90px;
 }
 
-.tokenSelector {
+.tokenSelected {
+    background: linear-gradient(91.2deg, #7864E8 1.47%, #6B90FF 25.48%, #7069ED 66.44%, #B25BF7 97.27%);
+}
+
+.tokenNotSelected {
     background: rgba(5, 5, 5, 0.44);
     border-width: 10px;
     border-image-source: linear-gradient(91.2deg, #7864E8 1.47%, #6B90FF 25.48%, #7069ED 66.44%, #B25BF7 97.27%);

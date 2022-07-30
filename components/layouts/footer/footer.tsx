@@ -1,8 +1,8 @@
 import {FunctionComponent} from "react";
+import {Box} from "@mui/material";
 
 import styles from './footer.module.css';
 import classNames from "classnames";
-import {Box} from "@mui/material";
 
 export const Footer: FunctionComponent = () => {
     return (

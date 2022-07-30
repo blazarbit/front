@@ -1,8 +1,9 @@
 import {FunctionComponent} from "react";
-import styles from "./content.module.css";
 import {About} from "../../about";
 import {PaymentPanel} from "../../payment-panel";
 import {Container, Grid} from "@mui/material";
+
+import styles from "./content.module.css";
 
 export const Content: FunctionComponent = () => {
     return (

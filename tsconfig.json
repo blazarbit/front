@@ -14,7 +14,8 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "jsxImportSource": "@emotion/react",
-    "incremental": true
+    "incremental": true,
+    "experimentalDecorators": true
   },
   "exclude": ["node_modules"],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
