@@ -51,7 +51,7 @@ export const TabPanel: FunctionComponent<TabPanelProps> = ({
                                                     }}
                                                     className={styles.chainCardContainer}
                                                 >
-                                                    <ChainCard contract={contract}/>
+                                                    <ChainCard contract={contract} chainSubCardType={chainType}/>
                                                 </Box>
                                             </Button>
                                         </Box>

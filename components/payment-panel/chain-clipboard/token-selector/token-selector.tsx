@@ -53,7 +53,7 @@ export const TokenSelector: FunctionComponent<Props> = ({
                 }}>
                     {selectedContract ? (
                         <Box className={styles.placeHolder}>
-                            <ChainCard contract={selectedContract}/>
+                            <ChainCard contract={selectedContract} chainSubCardType={selectedContract.chainType}/>
                         </Box>
                     ) : (
                         <span className={classNames(styles.placeHolder, 'bold18')}>{placeHolder}</span>

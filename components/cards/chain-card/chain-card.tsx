@@ -1,16 +1,20 @@
 import {FunctionComponent} from "react";
 import {Box} from "@mui/material";
-import {Contract} from "../../../apollo-client/data-model";
+import {ChainType, Contract} from "../../../apollo-client/data-model";
+import {ChainSubCard} from "./chain-subcard";
 
 import styles from "./chain-cards.module.css";
 import classNames from "classnames";
 
-
 interface Props {
+    chainSubCardType?: ChainType;
     contract: Contract;
 }
 
-export const ChainCard: FunctionComponent<Props> = ({contract}) => {
+export const ChainCard: FunctionComponent<Props> = ({
+    chainSubCardType = ChainType.Token,
+    contract
+}) => {
     return (
         <Box
             sx={{
@@ -32,6 +36,7 @@ export const ChainCard: FunctionComponent<Props> = ({contract}) => {
                 <span className={classNames(styles.chainName, 'bold20')}>{contract.chainName}</span>
                 <span className={classNames(styles.blockchainName, 'medium12')}>{contract.blockchainName}</span>
             </Box>
+            {!contract.isNativeToken() && <ChainSubCard contract={contract} chainSubCardType={chainSubCardType}/>}
         </Box>
     );
 }

@@ -1,0 +1,25 @@
+.fakeDepositChainLogo {
+    width: 35px;
+    height: 35px;
+    background: #353434;
+    border: 1px solid #FFFFFF;
+    border-radius: 40px;
+}
+
+.depositedAddress {
+    background: linear-gradient(91.2deg, #6D56E4 1.47%, #A45DCC 66.44%, #D355D2 97.27%), #D9D9D9;
+    border-radius: 6px;
+    height: 16px;
+    display: flex;
+    padding: 0.2em 0.5em;
+    color: #FFFFFF;
+}
+
+.depositSubCard span {
+    margin-top: 0.25em;
+}
+
+.depositChainName {
+    text-transform: none;
+    text-align: justify;
+}

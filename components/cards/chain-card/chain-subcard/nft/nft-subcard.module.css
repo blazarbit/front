@@ -1,0 +1,12 @@
+.nftSubCard span {
+    margin-top: 0.25em;
+}
+
+.contractAddress {
+    background: linear-gradient(91.2deg, #6D56E4 1.47%, #A45DCC 66.44%, #D355D2 97.27%), #D9D9D9;
+    border-radius: 6px;
+    height: 16px;
+    display: flex;
+    padding: 0.2em 0.5em;
+    color: #FFFFFF;
+}
