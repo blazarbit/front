@@ -5,6 +5,14 @@ export const apolloClient = new ApolloClient({
     cache: new InMemoryCache()
 });
 
+export const LOAD_BLOCKCHAIN_NETWORKS_SCRIPT = gql`
+query MyQuery {
+  blockchains {
+    network_id
+  }
+}
+`;
+
 export const LOAD_CHAIN_ELEMENTS_SCRIPT = gql`
 query MyQuery {
     tokens {

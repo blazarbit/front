@@ -1,5 +1,14 @@
 import {optional, property, typed} from "class-converter";
 
+export class BlockchainNetwork {
+    @property("network_id")
+    networkId: string;
+
+    constructor(networkId: string) {
+        this.networkId = networkId;
+    }
+}
+
 export class Blockchain {
     @property("blockchain_name")
     blockchainName: string;

@@ -8,3 +8,8 @@
     width: 100%;
     height: 4rem;
 }
+
+.disabledButton  {
+    background: linear-gradient(0deg, rgba(5, 5, 5, 0.44), rgba(5, 5, 5, 0.44)), linear-gradient(91.2deg, #7864E8 1.47%, #6B90FF 25.48%, #7069ED 66.44%, #B25BF7 97.27%);
+    color: rgba(255, 255, 255, 0.33)!important;
+}
