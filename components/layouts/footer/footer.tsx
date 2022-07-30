@@ -15,7 +15,7 @@ export const Footer: FunctionComponent = () => {
                 justifyContent: 'space-between',
                 width: 120
             }}>
-                <a href="https://github.com/blazarbit">
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/blazarbit">
                     <Box
                         component="img"
                         sx={{
@@ -25,7 +25,7 @@ export const Footer: FunctionComponent = () => {
                         src="gitLogo.png"
                     />
                 </a>
-                <a href="https://twitter.com/blazarbit">
+                <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/blazarbit">
                     <Box
                         component="img"
                         sx={{

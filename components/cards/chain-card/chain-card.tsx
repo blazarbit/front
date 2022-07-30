@@ -23,7 +23,14 @@ export const ChainCard: FunctionComponent<Props> = ({
                 alignItems: 'center'
             }}
         >
-            <div className={styles.fakeImage}/>
+            <Box
+                component="img"
+                sx={{
+                    width: 50,
+                    height: 50
+                }}
+                src={contract.chainLogo}
+            />
             <Box sx={{
                 display: 'flex',
                 overflow: 'hidden',

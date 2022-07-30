@@ -12,7 +12,14 @@ interface Props {
 export const DepositSubCard: FunctionComponent<Props> = ({contract}) => {
     return (
         <>
-            <div className={styles.fakeDepositChainLogo}/>
+            <Box
+                component="img"
+                sx={{
+                    width: 35,
+                    height: 35
+                }}
+                src={contract.blockchain.blockchainLogoUrl}
+            />
             <Box sx={{
                 display: 'flex',
                 overflow: 'hidden',

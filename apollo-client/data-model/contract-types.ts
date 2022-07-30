@@ -10,6 +10,8 @@ export enum ChainType {
 export interface Contract {
     get chainName(): string;
 
+    get chainLogo(): string;
+
     get blockchainName(): string;
 
     get chainType(): ChainType;
@@ -35,12 +37,16 @@ export class Token implements Contract {
         this.blockchain = blockchain;
     }
 
-    get blockchainName(): string {
-        return this.tokenData.baseBlockchain.blockchainName;
-    }
-
     get chainName(): string {
         return this.tokenData.symbol;
+    }
+
+    get chainLogo(): string {
+        return this.tokenData.logoUrl;
+    }
+
+    get blockchainName(): string {
+        return this.tokenData.baseBlockchain.blockchainName;
     }
 
     get chainType(): ChainType {
@@ -88,6 +94,10 @@ export class NftContract extends DestinationAsset implements Contract {
         return this.name;
     }
 
+    get chainLogo(): string {
+        return this.logoUrl;
+    }
+
     get blockchainName(): string {
         return this.blockchain.blockchainName;
     }
@@ -114,6 +124,10 @@ export class Donation extends DestinationAsset implements Contract {
 
     get chainName(): string {
         return this.token.tokenData.symbol;
+    }
+
+    get chainLogo(): string {
+        return this.token.tokenData.logoUrl;
     }
 
     get blockchainName(): string {

@@ -12,7 +12,14 @@ interface Props {
 export const DonationSubCard: FunctionComponent<Props> = ({contract}) => {
     return (
         <>
-            <div className={styles.fakeDonationChainLogo}/>
+            <Box
+                component="img"
+                sx={{
+                    width: 35,
+                    height: 35
+                }}
+                src={contract.logoUrl}
+            />
             <Box sx={{
                 display: 'flex',
                 overflow: 'hidden',

@@ -1,11 +1,3 @@
-.fakeDonationChainLogo {
-    width: 35px;
-    height: 35px;
-    background: #353434;
-    border: 1px solid #FFFFFF;
-    border-radius: 40px;
-}
-
 .donationChainName {
     text-transform: none;
 }
