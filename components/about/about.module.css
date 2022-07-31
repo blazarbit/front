@@ -1,6 +1,8 @@
 .aboutContainer {
     padding: 33px 21px;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .aboutContent {
@@ -8,9 +10,17 @@
     padding-right: 0.5em;
 }
 
-.leftimg {
-    float:left;
-    margin: 7px 10px 7px 0;
+.aboutText {
+    font-family: 'Inter', serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 34px;
+    line-height: 150%;
+    /* or 45px */
+
+    text-transform: uppercase;
+
+    color: #FFFFFF;
 }
 
 .aboutContent::-webkit-scrollbar {
