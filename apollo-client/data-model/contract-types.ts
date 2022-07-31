@@ -145,7 +145,7 @@ export class Donation extends DestinationAsset implements Contract {
     }
 
     get blockchainNetworkId(): string {
-        return this.token.blockchainNetworkId;
+        return this.token.blockchain.blockchainNetworkId;
     }
 
     get chainType(): ChainType {
