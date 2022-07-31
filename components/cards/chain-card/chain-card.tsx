@@ -29,7 +29,7 @@ export const ChainCard: FunctionComponent<Props> = ({
                     width: 50,
                     height: 50
                 }}
-                src={contract.chainLogo}
+                src={contract.chainLogo || "tokensDefault.png"}
             />
             <Box sx={{
                 display: 'flex',

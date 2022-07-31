@@ -1,0 +1,24 @@
+.aboutContainer {
+    padding: 33px 21px;
+    display: flex;
+}
+
+.aboutContent {
+    overflow-y: scroll;
+    padding-right: 0.5em;
+}
+
+.leftimg {
+    float:left;
+    margin: 7px 10px 7px 0;
+}
+
+.aboutContent::-webkit-scrollbar {
+    width: 0.5rem;
+    padding-right: 5px;
+}
+
+.aboutContent::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}

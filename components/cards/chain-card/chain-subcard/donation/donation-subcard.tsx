@@ -18,7 +18,7 @@ export const DonationSubCard: FunctionComponent<Props> = ({contract}) => {
                     width: 35,
                     height: 35
                 }}
-                src={contract.logoUrl}
+                src={contract.logoUrl || "donationDefault.png"}
             />
             <Box sx={{
                 display: 'flex',

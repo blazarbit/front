@@ -18,7 +18,7 @@ export const DepositSubCard: FunctionComponent<Props> = ({contract}) => {
                     width: 35,
                     height: 35
                 }}
-                src={contract.blockchain.blockchainLogoUrl}
+                src={contract.blockchain.blockchainLogoUrl || "depositDefault.png"}
             />
             <Box sx={{
                 display: 'flex',
