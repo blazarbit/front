@@ -31,11 +31,11 @@ const style = {
 };
 
 export const TokenSelectorModal: FunctionComponent<Props> = ({
-                                                                 open,
-                                                                 setOpen,
-                                                                 handleSelectedContract,
-                                                                 isDestinationChain
-                                                             }) => {
+    open,
+    setOpen,
+    handleSelectedContract,
+    isDestinationChain
+}) => {
     const {tokensLoaded, setTokensLoaded} = useTokensLoadedContext();
     const {setBlurScreen} = useBlurContext();
 

@@ -6,16 +6,21 @@ import {useKeplerContext} from "../../../contexts";
 import styles from "./payment-confirm.module.css";
 import classNames from "classnames";
 
-export const PaymentConfirm: FunctionComponent = () => {
+interface Props {
+    disabled?: boolean;
+    onPaymentConfirm: Function;
+}
+
+export const PaymentConfirm: FunctionComponent<Props> = ({disabled, onPaymentConfirm}) => {
     const {keplerLoaded} = useKeplerContext();
 
     return (
         <Box sx={{
             marginTop: '2rem'
         }}>
-            <Button variant="contained" disabled={!keplerLoaded}
-                    className={classNames(styles.paymentConfirmButton, "bold20", !keplerLoaded ? styles.disabledButton : null)}
-            >
+            <Button variant="contained" disabled={disabled || !keplerLoaded}
+                    className={classNames(styles.paymentConfirmButton, "bold20", disabled ? styles.disabled : null)}
+                    onClick={() => onPaymentConfirm()}>
                 Confirm
             </Button>
         </Box>

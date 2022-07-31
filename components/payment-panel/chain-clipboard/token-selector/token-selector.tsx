@@ -12,7 +12,7 @@ import classNames from "classnames";
 
 interface Props {
     placeHolder: string;
-    isDestinationChain: boolean;
+    isDestinationAsset: boolean;
     tokenSelected: boolean;
     setTokenSelected: Function;
     selectedContract?: Contract;
@@ -21,7 +21,7 @@ interface Props {
 
 export const TokenSelector: FunctionComponent<Props> = ({
     placeHolder,
-    isDestinationChain,
+    isDestinationAsset,
     tokenSelected,
     setTokenSelected,
     selectedContract,
@@ -65,7 +65,7 @@ export const TokenSelector: FunctionComponent<Props> = ({
                 open={open}
                 setOpen={setOpen}
                 handleSelectedContract={handleSelectedContract}
-                isDestinationChain={isDestinationChain}
+                isDestinationChain={isDestinationAsset}
             />
         </>
     );

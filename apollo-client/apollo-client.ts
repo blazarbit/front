@@ -65,3 +65,47 @@ query MyQuery {
         }
     }
 }`;
+
+export const LOAD_PROTOCOL_INSTRUCTIONS_SCRIPT = gql`
+query MyQuery(
+  $p_m_blockchain: String, 
+  $p_m_denom: String, 
+  $d_a_blockchain: String, 
+  $d_a_denom: String, 
+  $d_a_denom_is_null: Boolean, 
+  $d_a_address: String, 
+  $d_a_address_is_null: Boolean, 
+  $d_a_contract_address: String, 
+  $d_a_contract_address_is_null: Boolean
+) {
+  protocolInstructions: protocol_instructions(
+    limit: 1, 
+    where: {_and: [
+      {payment_method_blockchain: {_eq: $p_m_blockchain}}, 
+      {payment_method_denom: {_eq: $p_m_denom}}, 
+      {destination_asset_blockchain: {_eq: $d_a_blockchain}}, 
+      {_or: [
+        {destination_asset_denom: {_eq: $d_a_denom}}, 
+        {destination_asset_denom: {_is_null: $d_a_denom_is_null}}]}, 
+      {_or: [
+        {destination_asset_address: {_eq: $d_a_address}}, 
+        {destination_asset_address: {_is_null: $d_a_address_is_null}}]},
+      {_or: [
+        {destination_asset_contract_address: {_eq: $d_a_contract_address}}, 
+        {destination_asset_contract_address: {_is_null: $d_a_contract_address_is_null}}]}]}) {
+  destination_asset_address
+  destination_asset_amount
+  destination_asset_blockchain
+  destination_asset_contract_address
+  destination_asset_denom
+  fee
+  funds
+  id
+  json_encoded_send_args
+  memo
+  payment_method_blockchain
+  payment_method_denom
+  payment_token_amount
+}
+}
+`;

@@ -14,6 +14,8 @@ export interface Contract {
 
     get blockchainName(): string;
 
+    get blockchainNetworkId(): string;
+
     get chainType(): ChainType;
 
     isNativeToken(): boolean;
@@ -47,6 +49,10 @@ export class Token implements Contract {
 
     get blockchainName(): string {
         return this.tokenData.baseBlockchain.blockchainName;
+    }
+
+    get blockchainNetworkId(): string {
+        return this.tokenData.baseBlockchain.blockchainNetworkId;
     }
 
     get chainType(): ChainType {
@@ -102,6 +108,10 @@ export class NftContract extends DestinationAsset implements Contract {
         return this.blockchain.blockchainName;
     }
 
+    get blockchainNetworkId(): string {
+        return this.blockchain.blockchainNetworkId;
+    }
+
     get chainType(): ChainType {
         return ChainType.Nft;
     }
@@ -132,6 +142,10 @@ export class Donation extends DestinationAsset implements Contract {
 
     get blockchainName(): string {
         return this.token.blockchain.blockchainName;
+    }
+
+    get blockchainNetworkId(): string {
+        return this.token.blockchainNetworkId;
     }
 
     get chainType(): ChainType {

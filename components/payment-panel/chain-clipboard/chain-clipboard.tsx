@@ -11,17 +11,21 @@ import classNames from "classnames";
 interface Props {
     labelName: string;
     amountName: string;
-    isDestinationChain?: boolean;
+    isDestinationAsset?: boolean;
     selectedContract?: Contract;
     setSelectedContract: Function;
+    tokenAmount?: string;
+    setTokenAmount?: Function;
 }
 
 export const ChainClipboard: FunctionComponent<Props> = ({
     labelName,
     amountName,
-    isDestinationChain = false,
+    isDestinationAsset = false,
     selectedContract,
-    setSelectedContract
+    setSelectedContract,
+    tokenAmount,
+    setTokenAmount
 }) => {
     const [tokenSelected, setTokenSelected] = useState(false);
 
@@ -29,7 +33,7 @@ export const ChainClipboard: FunctionComponent<Props> = ({
         <div className={styles.chainContainer}>
             <div className={classNames(styles.labelPanel)}>
                 <span className='medium12'>{labelName}</span>
-                {isDestinationChain && <ArrowDownwardIcon/>}
+                {isDestinationAsset && <ArrowDownwardIcon/>}
                 <span className='medium12'>{amountName}</span>
             </div>
             <Box
@@ -44,11 +48,15 @@ export const ChainClipboard: FunctionComponent<Props> = ({
                     placeHolder={labelName}
                     tokenSelected={tokenSelected}
                     setTokenSelected={setTokenSelected}
-                    isDestinationChain={isDestinationChain}
+                    isDestinationAsset={isDestinationAsset}
                     selectedContract={selectedContract}
                     setSelectedContract={setSelectedContract}
                 />
-                <TokenAmount disabled={!tokenSelected}/>
+                <TokenAmount
+                    tokenAmount={tokenAmount}
+                    setTokenAmount={setTokenAmount}
+                    disabled={isDestinationAsset || !tokenSelected}
+                />
             </Box>
         </div>
     );
