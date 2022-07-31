@@ -16,4 +16,5 @@
 
 .destinationAddress input {
     color: #AAAAAA;
+    -webkit-text-fill-color: #AAAAAA;
 }
