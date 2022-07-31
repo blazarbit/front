@@ -110,6 +110,10 @@ export const PaymentPanel: FunctionComponent<Props> = ({className}) => {
             }).then(({data: {protocolInstructions}}) => {
                 setProtocolInstructions(toClasses(protocolInstructions, ProtocolInstructions));
                 setIsLoadedProtocolInstructions(true);
+                if (destinationAssetContract.chainType === ChainType.Donation) {
+                    const donation = destinationAssetContract as Donation;
+                    setDestinationAddress(donation.contractAddress);
+                }
             })
         }
     }, [paymentMethodContract, destinationAssetContract]);
@@ -137,7 +141,7 @@ export const PaymentPanel: FunctionComponent<Props> = ({className}) => {
             <DestinationAddress
                 destinationAddress={destinationAddress}
                 setDestinationAddress={setDestinationAddress}
-                disabled={!isLoadedProtocolInstructions || destinationAssetContract?.chainType === ChainType.Donation}/>
+                disabled={destinationAssetContract?.chainType === ChainType.Donation}/>
             <ExecutionInfo/>
             <PaymentConfirm onPaymentConfirm={onPaymentConfirm} disabled={!isLoadedProtocolInstructions || !paymentMethodAmount || !destinationAddress}/>
         </div>
