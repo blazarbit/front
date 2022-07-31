@@ -12,12 +12,12 @@ export const About: FunctionComponent<Props> = ({className}) => {
     return (
         <div className={classNames(className, styles.aboutContainer)}>
             <Box className={styles.aboutContent}>
-                <Box textAlign='justify'>
+                <Box textAlign='justify' sx={{marginLeft: '50px'}}>
                     <Box
                         component="img"
                         sx={{
                             width: 700,
-                            height: 360
+                            height: 400
                         }}
                         src={"about.jpg"}
                     />
