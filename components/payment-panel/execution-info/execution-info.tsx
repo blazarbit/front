@@ -4,7 +4,11 @@ import {Box, TextField} from "@mui/material";
 import styles from "./execution-info.module.css"
 import classNames from "classnames";
 
-export const ExecutionInfo: FunctionComponent = () => {
+interface Props {
+    instructions?: string[]
+}
+
+export const ExecutionInfo: FunctionComponent<Props> = ({instructions}) => {
     return (
         <Box>
             <div className={styles.labelPanel}>
@@ -16,7 +20,7 @@ export const ExecutionInfo: FunctionComponent = () => {
                 rows={3}
                 type='text'
                 fullWidth
-                value=''
+                value={instructions?.join("<br>") || ''}
                 variant='outlined'
                 inputProps={
                     {readOnly: true}

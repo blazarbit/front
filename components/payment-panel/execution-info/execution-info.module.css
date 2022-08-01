@@ -23,6 +23,7 @@
     padding-left: 6px;
     padding-right: 0.5rem;
     color: #AAAAAA;
+    word-break: break-all;
 
     font-family: 'Inter', serif;
     font-style: normal;

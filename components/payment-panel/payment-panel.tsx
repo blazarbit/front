@@ -25,6 +25,7 @@ export const PaymentPanel: FunctionComponent<Props> = ({className}) => {
     const [paymentMethodContract, setPaymentMethodContract] = useState<Contract>();
     const [destinationAssetContract, setDestinationAssetContract] = useState<Contract>();
     const [protocolInstructions, setProtocolInstructions] = useState<ProtocolInstructions[]>();
+    const [executionInstructions, setExecutionInstructions] = useState<string[]>();
     const [isLoadedProtocolInstructions, setIsLoadedProtocolInstructions] = useState(false);
     const [paymentMethodAmount, setPaymentMethodAmount] = useState<string>("");
     const [destinationAddress, setDestinationAddress] = useState<string>("");
@@ -108,7 +109,10 @@ export const PaymentPanel: FunctionComponent<Props> = ({className}) => {
                     "d_a_contract_address_is_null": destinationAssetContract.chainType !== ChainType.Nft
                 }
             }).then(({data: {protocolInstructions}}) => {
-                setProtocolInstructions(toClasses(protocolInstructions, ProtocolInstructions));
+                const instructions = toClasses(protocolInstructions, ProtocolInstructions);
+                const executionInstructions = instructions?.map((instruction)=>JSON.stringify(instruction?.transactionInstructions));
+                setProtocolInstructions(instructions);
+                setExecutionInstructions(executionInstructions)
                 setIsLoadedProtocolInstructions(true);
                 if (destinationAssetContract.chainType === ChainType.Donation) {
                     const donation = destinationAssetContract as Donation;
@@ -142,7 +146,7 @@ export const PaymentPanel: FunctionComponent<Props> = ({className}) => {
                 destinationAddress={destinationAddress}
                 setDestinationAddress={setDestinationAddress}
                 disabled={destinationAssetContract?.chainType === ChainType.Donation}/>
-            <ExecutionInfo/>
+            <ExecutionInfo instructions={executionInstructions}/>
             <PaymentConfirm onPaymentConfirm={onPaymentConfirm} disabled={!isLoadedProtocolInstructions || !paymentMethodAmount || !destinationAddress}/>
         </div>
     );
