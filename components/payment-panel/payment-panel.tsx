@@ -100,7 +100,7 @@ export const PaymentPanel: FunctionComponent<Props> = ({className}) => {
                 variables: {
                     "p_m_blockchain": paymentMethodData.blockchain.blockchainNetworkId,
                     "p_m_denom": paymentMethodData.denom,
-                    "d_a_blockchain": destinationAssetContract.blockchainNetworkId,
+                    "d_a_blockchain": destinationAssetContract.destinationNetworkId,
                     "d_a_denom": d_a_denom,
                     "d_a_denom_is_null": destinationAssetContract.chainType !== ChainType.Token,
                     "d_a_address": d_a_address,
