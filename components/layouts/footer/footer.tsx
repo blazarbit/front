@@ -15,7 +15,7 @@ export const Footer: FunctionComponent = () => {
                 justifyContent: 'space-between',
                 width: 120
             }}>
-                <a target="_blank" rel="noopener noreferrer" href="https://github.com/blazarbit">
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/blazarbit/HackAtom">
                     <Box
                         component="img"
                         sx={{

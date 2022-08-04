@@ -16,6 +16,7 @@ import {apolloClient, LOAD_PROTOCOL_INSTRUCTIONS_SCRIPT} from "../../apollo-clie
 
 import styles from "./payment-panel.module.css";
 import classNames from "classnames";
+import {toast} from "react-toastify";
 
 interface Props {
     className: string;
@@ -61,15 +62,18 @@ export const PaymentPanel: FunctionComponent<Props> = ({className}) => {
             }),
         };
 
-        const result = await client.signAndBroadcast(senderAddress, [msg], "auto", protocolInstructions[0].memo);
-
-        if (result.code !== undefined &&
-            result.code !== 0) {
-            // @ts-ignore
-            alert("Failed to send tx: " + result.log || result.rawLog);
-        } else {
-            alert("Succeed to send tx:" + result.transactionHash);
-        }
+        await client.signAndBroadcast(senderAddress, [msg], "auto", protocolInstructions[0].memo)
+            .then(result => {
+                if (result.code !== undefined &&
+                    result.code !== 0) {
+                    toast.error(`Failed to send tx: ${result.rawLog}`);
+                } else {
+                    toast.success(`Succeed to send tx: ${result.transactionHash}`);
+                }
+            })
+            .catch(error => {
+                toast.error(`Failed to send tx: ${error.rawLog}`);
+            });
     }
 
     const onPaymentConfirm = () => {
@@ -110,7 +114,7 @@ export const PaymentPanel: FunctionComponent<Props> = ({className}) => {
                 }
             }).then(({data: {protocolInstructions}}) => {
                 const instructions = toClasses(protocolInstructions, ProtocolInstructions);
-                const executionInstructions = instructions?.map((instruction)=>JSON.stringify(instruction?.transactionInstructions));
+                const executionInstructions = instructions?.map((instruction) => JSON.stringify(instruction?.transactionInstructions));
                 setProtocolInstructions(instructions);
                 setExecutionInstructions(executionInstructions)
                 setIsLoadedProtocolInstructions(true);
@@ -147,7 +151,8 @@ export const PaymentPanel: FunctionComponent<Props> = ({className}) => {
                 setDestinationAddress={setDestinationAddress}
                 disabled={destinationAssetContract?.chainType === ChainType.Donation}/>
             <ExecutionInfo instructions={executionInstructions}/>
-            <PaymentConfirm onPaymentConfirm={onPaymentConfirm} disabled={!isLoadedProtocolInstructions || !paymentMethodAmount || !destinationAddress}/>
+            <PaymentConfirm onPaymentConfirm={onPaymentConfirm}
+                            disabled={!isLoadedProtocolInstructions || !paymentMethodAmount || !destinationAddress}/>
         </div>
     );
 }

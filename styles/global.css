@@ -46,3 +46,8 @@ input[type=number] {
   text-align: end;
   -moz-appearance: textfield;
 }
+
+.notificationToast {
+  word-break: break-word;
+  width: 512px;
+}

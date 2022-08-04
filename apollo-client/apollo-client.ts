@@ -85,14 +85,27 @@ query MyQuery(
       {payment_method_denom: {_eq: $p_m_denom}}, 
       {destination_asset_blockchain: {_eq: $d_a_blockchain}}, 
       {_or: [
-        {destination_asset_denom: {_eq: $d_a_denom}}, 
-        {destination_asset_denom: {_is_null: $d_a_denom_is_null}}]}, 
+        {destination_asset_denom: {_eq: $d_a_denom}},
+        {_and: [
+          {destination_asset_denom: {_is_null: $d_a_denom_is_null}},
+          {destination_asset_denom: {_is_null: true}}
+        ]}
+      ]}, 
       {_or: [
-        {destination_asset_address: {_eq: $d_a_address}}, 
-        {destination_asset_address: {_is_null: $d_a_address_is_null}}]},
+        {destination_asset_address: {_eq: $d_a_address}},
+        {_and: [
+          {destination_asset_address: {_is_null: $d_a_address_is_null}},
+          {destination_asset_address: {_is_null: true}}
+        ]}
+      ]},
       {_or: [
-        {destination_asset_contract_address: {_eq: $d_a_contract_address}}, 
-        {destination_asset_contract_address: {_is_null: $d_a_contract_address_is_null}}]}]}) {
+        {destination_asset_contract_address: {_eq: $d_a_contract_address}},
+        {_and: [
+          {destination_asset_contract_address: {_is_null: $d_a_contract_address_is_null}},
+          {destination_asset_contract_address: {_is_null: true}}
+        ]}
+      ]}
+    ]}) {
   destination_asset_address
   destination_asset_amount
   destination_asset_blockchain
